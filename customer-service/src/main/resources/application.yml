@@ -1,0 +1,22 @@
+server:
+  port: 3002
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: customerDB
+  application:
+    name: CUSTOMER-SERVICE
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service_url:
+      default:zone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost
+    server:
+      wait-time-in-ms-when-sync-empty: 0

@@ -1,0 +1,20 @@
+server:
+  port: 3003
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: ordersDB
+  application:
+    name: ORDER-SERVICE
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service_url:
+      default:zone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost
